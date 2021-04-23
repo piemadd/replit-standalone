@@ -41,8 +41,7 @@ nativefier(options, function (error, appPath) {
 		console.error(error);
 		return;
 	}
-	let plat = process.platform;
-	if (plat === 'win32') {
+	if (process.platform === 'win32') {
 		exec("set PATH=%PATH%;C:\\Users\\%USERNAME%\\node_modules\\replit-standalone\\replit-standalone-win32-x64", (error, stdout, stderr) => {
 			if (error) {
 				console.log(`error: ${error.message}`);
@@ -54,7 +53,7 @@ nativefier(options, function (error, appPath) {
 			}
 			console.log(`stdout: ${stdout}`);
 		});
-	} else if (plat === 'linux') {
+	} else if (process.platform === 'linux') {
 		exec("export PATH=$PATH:$PWD/node_modules/replit-standalone/replit-standalone-linux-x64", (error, stdout, stderr) => {
 			if (error) {
 				console.log(`error: ${error.message}`);
@@ -66,7 +65,7 @@ nativefier(options, function (error, appPath) {
 			}
 			console.log(`stdout: ${stdout}`);
 		});
-		exec("chmod +x $PWD/replit-standalone-linux-x64/replit-standalone", (error, stdout, stderr) => {
+		exec("bash chmod_it.sh", (error, stdout, stderr) => {
 			if (error) {
 				console.log(`error: ${error.message}`);
 				return;

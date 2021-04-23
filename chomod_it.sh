@@ -1,0 +1,1 @@
+chmod +x $PWD/replit-standalone-linux-x64/replit-standalone
