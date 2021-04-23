@@ -1,0 +1,2 @@
+#run="bash install.sh"
+run="node index.js"

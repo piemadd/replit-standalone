@@ -1,0 +1,1 @@
+console.log("replit-standalone is a standalone executable which you cannot import. Please try running `replit-standalone` in your browser.")
