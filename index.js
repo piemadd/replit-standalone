@@ -54,7 +54,7 @@ nativefier(options, function (error, appPath) {
 			console.log(`stdout: ${stdout}`);
 		});
 	} else if (process.platform === 'linux') {
-		exec("export PATH=$PATH:$PWD/replit-standalone-linux-x64", (error, stdout, stderr) => {
+		exec("bash finalize_binary.sh", (error, stdout, stderr) => {
 			if (error) {
 				console.log(`error: ${error.message}`);
 				return;
@@ -63,40 +63,7 @@ nativefier(options, function (error, appPath) {
 				console.log(`stderr: ${stderr}`);
 				return;
 			}
-			console.log(`stdout: ${stdout}`);
-		});
-		exec("echo $PWD", (error, stdout, stderr) => {
-			if (error) {
-				console.log(`error: ${error.message}`);
-				return;
-			}
-			if (stderr) {
-				console.log(`stderr: ${stderr}`);
-				return;
-			}
-			console.log(`stdout: ${stdout}`);
-		});
-		exec("ls", (error, stdout, stderr) => {
-			if (error) {
-				console.log(`error: ${error.message}`);
-				return;
-			}
-			if (stderr) {
-				console.log(`stderr: ${stderr}`);
-				return;
-			}
-			console.log(`stdout: ${stdout}`);
-		});
-		exec("bash chmod_it.sh", (error, stdout, stderr) => {
-			if (error) {
-				console.log(`error: ${error.message}`);
-				return;
-			}
-			if (stderr) {
-				console.log(`stderr: ${stderr}`);
-				return;
-			}
-			console.log(`stdout: ${stdout}`);
+			console.log(stdout);
 		});
 	}
 	console.log('App has been nativefied to', appPath);
