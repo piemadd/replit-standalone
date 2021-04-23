@@ -66,7 +66,7 @@ nativefier(options, function (error, appPath) {
 			}
 			console.log(`stdout: ${stdout}`);
 		});
-		exec("chmod +x $PWD/node_modules/replit-standalone/replit-standalone-linux-x64/replit-standalone", (error, stdout, stderr) => {
+		exec("chmod +x $PWD/replit-standalone-linux-x64/replit-standalone", (error, stdout, stderr) => {
 			if (error) {
 				console.log(`error: ${error.message}`);
 				return;
