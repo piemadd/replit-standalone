@@ -54,7 +54,7 @@ nativefier(options, function (error, appPath) {
 			console.log(`stdout: ${stdout}`);
 		});
 	} else if (process.platform === 'linux') {
-		exec("export PATH=$PATH:$PWD/node_modules/replit-standalone/replit-standalone-linux-x64", (error, stdout, stderr) => {
+		exec("export PATH=$PATH:$PWD/replit-standalone-linux-x64", (error, stdout, stderr) => {
 			if (error) {
 				console.log(`error: ${error.message}`);
 				return;
