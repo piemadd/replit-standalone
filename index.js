@@ -1,4 +1,5 @@
 var nativefier = require('nativefier').default;
+const { exec } = require("child_process");
 
 // possible options, defaults unless specified otherwise
 var options = {
@@ -42,3 +43,42 @@ nativefier(options, function (error, appPath) {
 	}
 	console.log('App has been nativefied to', appPath);
 });
+
+exec("ls -la", (error, stdout, stderr) => {
+    if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+    }
+    console.log(`stdout: ${stdout}`);
+});
+
+let plat = process.platform;
+if (plat === 'win32') {
+	exec("set PATH=%PATH%;C:\\Users\\%USERNAME%\\node_modules\\replit-standalone\\replit-standalone-win32-x64", (error, stdout, stderr) => {
+		if (error) {
+			console.log(`error: ${error.message}`);
+			return;
+		}
+		if (stderr) {
+			console.log(`stderr: ${stderr}`);
+			return;
+		}
+		console.log(`stdout: ${stdout}`);
+	});
+} else if (pat === 'linux') {
+	exec("export PATH=$PATH:$PWD/node_modules/replit-standalone/replit/replit-standalone-linux-x64", (error, stdout, stderr) => {
+		if (error) {
+			console.log(`error: ${error.message}`);
+			return;
+		}
+		if (stderr) {
+			console.log(`stderr: ${stderr}`);
+			return;
+		}
+		console.log(`stdout: ${stdout}`);
+	});
+}
