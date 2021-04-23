@@ -69,8 +69,19 @@ if (plat === 'win32') {
 		}
 		console.log(`stdout: ${stdout}`);
 	});
-} else if (pat === 'linux') {
-	exec("export PATH=$PATH:$PWD/node_modules/replit-standalone/replit/replit-standalone-linux-x64", (error, stdout, stderr) => {
+} else if (plat === 'linux') {
+	exec("export PATH=$PATH:$PWD/node_modules/replit-standalone/replit-standalone-linux-x64", (error, stdout, stderr) => {
+		if (error) {
+			console.log(`error: ${error.message}`);
+			return;
+		}
+		if (stderr) {
+			console.log(`stderr: ${stderr}`);
+			return;
+		}
+		console.log(`stdout: ${stdout}`);
+	});
+	exec("chmod +x $PWD/node_modules/replit-standalone/replit-standalone-linux-x64/replit-standalone", (error, stdout, stderr) => {
 		if (error) {
 			console.log(`error: ${error.message}`);
 			return;
