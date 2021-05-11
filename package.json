@@ -1,17 +1,23 @@
 {
 	"name": "replit-standalone",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"description": "A standalone desktop app for Replit.com. This is an unofficial tool and is not endorsed by Replit in any way.",
 	"main": "tell.js",
 	"scripts": {
 		"postinstall": "node ./index.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"keywords": ["replit", "repl.it", "repl it", "repl dot it"],
+	"keywords": [
+		"replit",
+		"repl.it",
+		"repl it",
+		"repl dot it"
+	],
 	"author": "Piero Maddaleni",
 	"license": "ISC",
 	"dependencies": {
 		"electron": "^12.0.5",
-		"nativefier": "^43.0.2"
+		"nativefier": "^43.0.2",
+		"npm": "^7.12.1"
 	}
 }
