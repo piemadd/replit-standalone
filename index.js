@@ -20,15 +20,16 @@ var options = {
 	disablecontextmenu: true,
 	showMenuBar: false,
 	fastQuit: false,
-	userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', // will infer a default for your current system
+	userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36',
 	ignoreCertificate: false,
 	ignoreGpuBlacklist: false,
 	enableEs3Apis: false,
 	internalUrls: '.*?\.replit\.*?',
 	blockExternalUrls: false,
 	insecure: false,
-	honest: false,
+	honest: true,
 	zoom: 1.0,
+	inject: 'default_exts/dns.js',
 	singleInstance: false,
 	clearCache: false,
 	fileDownloadOptions: {
