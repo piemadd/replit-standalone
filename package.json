@@ -1,6 +1,6 @@
 {
 	"name": "replit-standalone",
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"description": "A standalone desktop app for Replit.com. This is an unofficial tool and is not endorsed by Replit in any way.",
 	"main": "tell.js",
 	"scripts": {
