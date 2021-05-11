@@ -4,7 +4,7 @@ const { exec } = require("child_process");
 // possible options, defaults unless specified otherwise
 var options = {
 	name: 'replit-standalone', // will be inferred if not specified
-	targetUrl: 'https://replit.com', // required
+	targetUrl: 'https://replit.com/', // required
 	platform: '', // defaults to the current system
 	arch: 'x64', // defaults to the current system
 	version: '0.1.0',
@@ -15,12 +15,12 @@ var options = {
 	counter: false,
 	bounce: false,
 	maxwidth: 800,
-	maxheight: 600,
+	minheight: 600,
 	hidewindowframe: true,
 	disablecontextmenu: true,
 	showMenuBar: false,
 	fastQuit: false,
-	userAgent: '', // will infer a default for your current system
+	userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', // will infer a default for your current system
 	ignoreCertificate: false,
 	ignoreGpuBlacklist: false,
 	enableEs3Apis: false,
